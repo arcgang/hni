@@ -1,9 +1,0 @@
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/controller/ProductController.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/dto/ProductResponse.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/config/KafkaConfig.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/config/SecurityConfig.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/ProductCatalogApplication.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/repository/ProductRepository.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/service/ProductService.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/dto/UpdateProductRequest.java
-/home/runner/work/hni/hni/backend/services/product-catalog/src/main/java/com/aurumone/productcatalog/dto/CreateProductRequest.java

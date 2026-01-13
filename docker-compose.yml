@@ -66,6 +66,25 @@ services:
     networks:
       - aurumone-network
 
+  # Product Catalog Service
+  product-catalog:
+    build:
+      context: .
+      dockerfile: backend/services/product-catalog/Dockerfile
+    container_name: aurumone-product-catalog
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/aurumone
+      SPRING_DATASOURCE_USERNAME: aurumone
+      SPRING_DATASOURCE_PASSWORD: aurumone_secret
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    depends_on:
+      - postgres
+      - kafka
+    networks:
+      - aurumone-network
+
 volumes:
   postgres_data:
   es_data:
