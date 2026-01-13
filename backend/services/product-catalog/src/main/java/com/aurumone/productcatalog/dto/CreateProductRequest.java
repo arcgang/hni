@@ -4,6 +4,7 @@ import com.aurumone.domain.enums.ProductType;
 import com.aurumone.domain.enums.RiskProfile;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,6 +34,7 @@ public class CreateProductRequest {
     
     @NotNull(message = "Risk rating is required")
     @Min(value = 1, message = "Risk rating must be between 1 and 10")
+    @Max(value = 10, message = "Risk rating must be between 1 and 10")
     private Integer riskRating;
     
     private RiskProfile minRiskProfile;

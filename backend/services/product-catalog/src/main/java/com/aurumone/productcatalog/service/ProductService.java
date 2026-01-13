@@ -8,6 +8,8 @@ import com.aurumone.domain.valueobjects.Money;
 import com.aurumone.productcatalog.dto.CreateProductRequest;
 import com.aurumone.productcatalog.dto.ProductResponse;
 import com.aurumone.productcatalog.dto.UpdateProductRequest;
+import com.aurumone.productcatalog.exception.ProductAlreadyExistsException;
+import com.aurumone.productcatalog.exception.ProductNotFoundException;
 import com.aurumone.productcatalog.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +39,7 @@ public class ProductService {
         
         // Check if product code already exists
         if (productRepository.findByProductCode(request.getProductCode()).isPresent()) {
-            throw new RuntimeException("Product with code " + request.getProductCode() + " already exists");
+            throw new ProductAlreadyExistsException("Product with code " + request.getProductCode() + " already exists");
         }
         
         // Create product entity
@@ -74,7 +76,7 @@ public class ProductService {
     @Transactional(readOnly = true)
     public ProductResponse getProduct(UUID productId) {
         Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found: " + productId));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found: " + productId));
         return toResponse(product);
     }
     
@@ -116,7 +118,7 @@ public class ProductService {
         log.info("Updating product: {}", productId);
         
         Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found: " + productId));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found: " + productId));
         
         if (request.getProductName() != null) {
             product.setProductName(request.getProductName());
@@ -154,7 +156,7 @@ public class ProductService {
         log.info("Deactivating product: {}", productId);
         
         Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found: " + productId));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found: " + productId));
         
         product.setIsActive(false);
         productRepository.save(product);

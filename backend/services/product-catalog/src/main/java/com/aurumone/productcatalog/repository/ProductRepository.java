@@ -1,7 +1,6 @@
 package com.aurumone.productcatalog.repository;
 
 import com.aurumone.domain.enums.ProductType;
-import com.aurumone.domain.enums.RiskProfile;
 import com.aurumone.domain.product.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
