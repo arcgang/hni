@@ -28,11 +28,18 @@
   - Explainable AI outputs
   - Risk disclosure generation
 
+- ✅ **Product Catalog Service** (Port 8084)
+  - Investment product management
+  - Product CRUD operations
+  - Suitability filtering by risk profile
+  - Product categorization by type
+  - Event publishing (Kafka)
+
 #### 2. **Shared Domain Library**
 - ✅ Core domain models (Client, Portfolio, Product)
 - ✅ Value objects (Money)
-- ✅ Enums (ClientSegment, RiskProfile, KYCStatus, etc.)
-- ✅ Event definitions (ClientCreated, PortfolioUpdated, etc.)
+- ✅ Enums (ClientSegment, RiskProfile, KYCStatus, ProductType, etc.)
+- ✅ Event definitions (ClientCreated, PortfolioUpdated, ProductCreated, etc.)
 
 #### 3. **Frontend Application** (React 18 + Tailwind CSS)
 - ✅ RM Dashboard with key metrics
@@ -71,7 +78,8 @@ hni/
 │   ├── services/
 │   │   ├── client-management/          # Client service (8081)
 │   │   ├── portfolio-management/       # Portfolio service (8082)
-│   │   └── advisory-engine/            # AI advisory (8083)
+│   │   ├── advisory-engine/            # AI advisory (8083)
+│   │   └── product-catalog/            # Product catalog (8084)
 │   └── shared/
 │       └── domain/                     # Shared domain models
 ├── frontend/                           # React application
@@ -122,6 +130,9 @@ cd backend/services/portfolio-management && mvn spring-boot:run
 # Run Advisory Engine
 cd backend/services/advisory-engine && mvn spring-boot:run
 
+# Run Product Catalog
+cd backend/services/product-catalog && mvn spring-boot:run
+
 # Run Frontend
 cd frontend && npm install && npm run dev
 ```
@@ -130,6 +141,8 @@ cd frontend && npm install && npm run dev
 - **Frontend**: http://localhost:3000
 - **Client API**: http://localhost:8081/swagger-ui.html
 - **Portfolio API**: http://localhost:8082/swagger-ui.html
+- **Advisory API**: http://localhost:8083/swagger-ui.html
+- **Product Catalog API**: http://localhost:8084/swagger-ui.html
 - **Advisory API**: http://localhost:8083/swagger-ui.html
 
 ---
@@ -300,7 +313,7 @@ cd frontend && npm install && npm run dev
 5. Create explainability framework
 
 ### Phase 4: Additional Services
-1. Product Catalog Service
+1. ~~Product Catalog Service~~ ✅ Completed
 2. Risk & Suitability Service
 3. Compliance Service
 4. Reporting Service
@@ -317,7 +330,7 @@ cd frontend && npm install && npm run dev
 
 ## 🎉 Success Metrics
 
-✅ **7 microservices** designed (3 implemented)
+✅ **7 microservices** designed (4 implemented)
 ✅ **Complete domain model** with DDD principles
 ✅ **Event-driven architecture** with Kafka
 ✅ **React frontend** with modern UI

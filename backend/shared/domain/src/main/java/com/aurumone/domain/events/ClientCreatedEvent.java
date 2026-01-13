@@ -2,7 +2,6 @@ package com.aurumone.domain.events;
 
 import com.aurumone.domain.enums.ClientSegment;
 import com.aurumone.domain.enums.RiskProfile;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,7 +15,6 @@ import java.util.UUID;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class ClientCreatedEvent extends DomainEvent {
     
