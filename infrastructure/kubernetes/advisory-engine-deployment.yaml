@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: advisory-engine-service
+  labels:
+    app: advisory-engine
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: advisory-engine
+  template:
+    metadata:
+      labels:
+        app: advisory-engine
+    spec:
+      containers:
+      - name: advisory-engine
+        image: aurumone/advisory-engine:latest
+        ports:
+        - containerPort: 8083
+        env:
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: kafka:9092
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "1000m"
+          limits:
+            memory: "2Gi"
+            cpu: "2000m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: advisory-engine-service
+spec:
+  selector:
+    app: advisory-engine
+  ports:
+  - protocol: TCP
+    port: 8083
+    targetPort: 8083
+  type: ClusterIP
