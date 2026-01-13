@@ -1,0 +1,13 @@
+com/aurumone/productcatalog/dto/ProductResponse.class
+com/aurumone/productcatalog/dto/CreateProductRequest$CreateProductRequestBuilder.class
+com/aurumone/productcatalog/controller/ProductController.class
+com/aurumone/productcatalog/dto/UpdateProductRequest.class
+com/aurumone/productcatalog/dto/CreateProductRequest.class
+com/aurumone/productcatalog/ProductCatalogApplication.class
+com/aurumone/productcatalog/config/SecurityConfig.class
+com/aurumone/productcatalog/dto/ProductResponse$ProductResponseBuilder.class
+com/aurumone/productcatalog/dto/UpdateProductRequest$UpdateProductRequestBuilder.class
+com/aurumone/productcatalog/config/KafkaConfig.class
+com/aurumone/productcatalog/service/ProductService$1.class
+com/aurumone/productcatalog/service/ProductService.class
+com/aurumone/productcatalog/repository/ProductRepository.class

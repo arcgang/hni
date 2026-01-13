@@ -1,0 +1,16 @@
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/portfolio/Portfolio.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/RecommendationGeneratedEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/ClientCreatedEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/product/Product.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/valueobjects/Money.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/enums/ClientSegment.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/ComplianceAlertRaisedEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/enums/ProductType.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/client/Client.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/DomainEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/portfolio/PortfolioHolding.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/PortfolioUpdatedEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/events/ProductCreatedEvent.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/enums/AssetClass.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/enums/KYCStatus.java
+/home/runner/work/hni/hni/backend/shared/domain/src/main/java/com/aurumone/domain/enums/RiskProfile.java

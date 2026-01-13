@@ -1,7 +1,6 @@
 package com.aurumone.domain.events;
 
 import com.aurumone.domain.valueobjects.Money;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,7 +14,6 @@ import java.util.UUID;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class PortfolioUpdatedEvent extends DomainEvent {
     
