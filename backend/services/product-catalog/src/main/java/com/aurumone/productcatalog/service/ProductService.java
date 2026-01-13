@@ -183,10 +183,18 @@ public class ProductService {
     }
     
     private Integer mapRiskProfileToRating(RiskProfile riskProfile) {
+        // Map risk profiles to maximum risk rating values
+        // CONSERVATIVE: low-risk products (ratings 1-3)
+        // MODERATE: medium-risk products (ratings 1-6)
+        // AGGRESSIVE: all risk levels (ratings 1-10)
+        final int CONSERVATIVE_MAX_RATING = 3;
+        final int MODERATE_MAX_RATING = 6;
+        final int AGGRESSIVE_MAX_RATING = 10;
+        
         return switch (riskProfile) {
-            case CONSERVATIVE -> 3;
-            case MODERATE -> 6;
-            case AGGRESSIVE -> 10;
+            case CONSERVATIVE -> CONSERVATIVE_MAX_RATING;
+            case MODERATE -> MODERATE_MAX_RATING;
+            case AGGRESSIVE -> AGGRESSIVE_MAX_RATING;
         };
     }
 }
