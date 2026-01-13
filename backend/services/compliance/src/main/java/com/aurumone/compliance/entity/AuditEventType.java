@@ -1,0 +1,19 @@
+package com.aurumone.compliance.entity;
+
+/**
+ * Types of audit events
+ */
+public enum AuditEventType {
+    ALERT_CREATED,
+    ALERT_REVIEWED,
+    ALERT_RESOLVED,
+    TRANSACTION_BLOCKED,
+    TRANSACTION_APPROVED,
+    KYC_VERIFIED,
+    KYC_REJECTED,
+    RECOMMENDATION_EVALUATED,
+    SUITABILITY_CHECK_PERFORMED,
+    RULE_EXECUTED,
+    COMPLIANCE_CHECK_COMPLETED,
+    USER_ACTION
+}

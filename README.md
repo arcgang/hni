@@ -24,13 +24,10 @@ AurumOne is an **AI-augmented, agentic wealth management platform** designed for
 ```
 ├── backend/
 │   ├── services/              # Microservices
-│   │   ├── client-management/
-│   │   ├── relationship-management/
-│   │   ├── portfolio-management/
-│   │   ├── advisory-engine/
-│   │   ├── product-catalog/
-│   │   ├── risk-suitability/
-│   │   └── compliance/
+│   │   ├── client-management/  (Port 8081)
+│   │   ├── portfolio-management/ (Port 8082)
+│   │   ├── advisory-engine/    (Port 8083)
+│   │   └── compliance/         (Port 8084)
 │   └── shared/                # Shared libraries
 │       ├── domain/
 │       ├── security/
@@ -86,7 +83,10 @@ docker-compose up -d
 
 ## API Documentation
 - OpenAPI specs available at: `/docs/api/`
-- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- Client Management: `http://localhost:8081/swagger-ui.html`
+- Portfolio Management: `http://localhost:8082/swagger-ui.html`
+- Advisory Engine: `http://localhost:8083/swagger-ui.html`
+- Compliance Service: `http://localhost:8084/swagger-ui.html`
 
 ## License
 Proprietary - AurumOne Platform

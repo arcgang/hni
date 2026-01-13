@@ -28,6 +28,14 @@
   - Explainable AI outputs
   - Risk disclosure generation
 
+- ✅ **Risk & Compliance Service** (Port 8084)
+  - AML transaction monitoring
+  - KYC verification management
+  - Compliance alert generation
+  - Comprehensive audit trail
+  - FATCA/CRS compliance tracking
+  - Suitability checks
+
 #### 2. **Shared Domain Library**
 - ✅ Core domain models (Client, Portfolio, Product)
 - ✅ Value objects (Money)
@@ -71,7 +79,8 @@ hni/
 │   ├── services/
 │   │   ├── client-management/          # Client service (8081)
 │   │   ├── portfolio-management/       # Portfolio service (8082)
-│   │   └── advisory-engine/            # AI advisory (8083)
+│   │   ├── advisory-engine/            # AI advisory (8083)
+│   │   └── compliance/                 # Risk & Compliance (8084)
 │   └── shared/
 │       └── domain/                     # Shared domain models
 ├── frontend/                           # React application
@@ -122,6 +131,9 @@ cd backend/services/portfolio-management && mvn spring-boot:run
 # Run Advisory Engine
 cd backend/services/advisory-engine && mvn spring-boot:run
 
+# Run Compliance Service
+cd backend/services/compliance && mvn spring-boot:run
+
 # Run Frontend
 cd frontend && npm install && npm run dev
 ```
@@ -131,6 +143,7 @@ cd frontend && npm install && npm run dev
 - **Client API**: http://localhost:8081/swagger-ui.html
 - **Portfolio API**: http://localhost:8082/swagger-ui.html
 - **Advisory API**: http://localhost:8083/swagger-ui.html
+- **Compliance API**: http://localhost:8084/swagger-ui.html
 
 ---
 
@@ -317,7 +330,7 @@ cd frontend && npm install && npm run dev
 
 ## 🎉 Success Metrics
 
-✅ **7 microservices** designed (3 implemented)
+✅ **7 microservices** designed (4 implemented)
 ✅ **Complete domain model** with DDD principles
 ✅ **Event-driven architecture** with Kafka
 ✅ **React frontend** with modern UI
